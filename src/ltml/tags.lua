@@ -10,5 +10,6 @@ return {
     "br",
     "doctype",
     "comment",
-    "input"
+    "input",
+    "b"
 }

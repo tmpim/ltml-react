@@ -1,14 +1,18 @@
 return function()
     return {
         head {
-            title "LTML Example"
+            title "LTML-react Example"
         },
         body {
-            h1 "LTML Example",
-            p { test = "asdf", data.message },
+            h1 "LTML-react Example",
+            p { "This page was created using only Lua (no HTML, JS, CSS). Type in the input to change the text below:", 
+                br,
+                b { data.message }
+            },
             br,
             img { src = data.img },
-            input { id = "box", type = "text", onkeydown = "input(this)", value = data.message }
+            br,
+            input { id = "box", type = "text", onkeydown = "input(this)", onkeyup = "input(this)", onchange = "input(this)", value = data.message }
         }
     }
 end
